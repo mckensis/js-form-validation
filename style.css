@@ -1,0 +1,84 @@
+body {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+}
+
+.myForm {
+  display: grid;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 1rem black;
+}
+
+.myForm > legend {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.myForm > label {
+  display: grid;
+  width: 20rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.myForm input,
+.myForm select {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+
+.myForm select {
+  text-align: center;
+  background-color: #fff;
+}
+
+.myForm input:focus,
+.myForm select:focus {
+  border: 1px solid black;
+  background-color: rgba(10,10,10,0.1);
+}
+
+input:invalid:not(:placeholder-shown) {
+  background-color: rgba(255,0,0,0.1);
+  border: 1px dashed red;
+}
+
+input:valid:not(:placeholder-shown),
+select:valid {
+  background-color: rgba(0,255,0,0.1);
+  border: 1px solid green;
+}
+
+.myForm > label:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.myForm > button {
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+}
+
+.submitted {
+  display: grid;
+  place-self: center;
+  place-items: center;
+  font-size: 1.8rem;
+}
