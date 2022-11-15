@@ -1,6 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,7 +34,6 @@ body {
 
 .myForm > label {
   display: grid;
-  width: 20rem;
   margin-bottom: 1.2rem;
   font-size: 1.4rem;
 }
@@ -40,6 +44,7 @@ body {
   margin-top: 0.5rem;
   padding: 0.5rem 0.25rem;
   outline: none;
+  width: 30ch;
   border: 1px solid black;
   border-radius: 0.25rem;
 }
@@ -72,8 +77,13 @@ select:valid {
 
 .myForm > button {
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
   border-radius: 2rem;
+  color: white;
+  background-color: #26547C;
+  outline: none;
+  border: 3px solid black;
 }
 
 .submitted {
@@ -81,4 +91,28 @@ select:valid {
   place-self: center;
   place-items: center;
   font-size: 1.8rem;
+}
+
+@media screen and (max-width: 400px) {
+
+  .myForm {
+    padding: 2rem;
+  }
+
+  .myForm input,
+  .myForm select {
+    width: 27ch;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .myForm {
+    padding: 1.5rem;
+  }
+
+  .myForm input,
+  .myForm select {
+    width: 25ch;
+  }
 }
